@@ -2,4 +2,24 @@ extends layout
 
 block content 
 
-    h1 THIS IS THE SIGNUP PAGE
+    h1 Sign Up 
+
+    form(method="POST")
+        label(for="name") FULL NAME: 
+        input(type="text", name="name", required)
+        br
+        label(for="email") EMAIL: 
+        input(type="email", name="email", required)
+        br
+        label(for="password") PASSWORD: 
+        input(type="password", name="password", required)
+        //- TO DO
+        //- label(for="password") PASSWORD: 
+        //- input(type="password", name="password", required)
+        //- TO DO
+        //- label(for="code") MEMBERSHIP CODE: 
+        //- input(type="number", name="code", required)
+        br
+        button(type="submit") Submit
+        
+         

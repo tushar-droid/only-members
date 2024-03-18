@@ -3,14 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-
-
+const passport = require("./passport-authentication");
+const session = require("express-session");
+require('dotenv').config();
 //GETTING THE ROUTES
 const homeRoute = require("./routes/home");
 const loginRoute = require("./routes/login"); 
 const signupRoute = require("./routes/signup");
+const postsRoute = require('./routes/posts');
+
+
 const dbConnect = require("./db_connection/mongoose-connection");
+
 
 
 
@@ -28,6 +32,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+app.use(session({secret: process.env.SECRET_KEY, resave: false, saveUninitialized: true}));
+
+app.use(passport.session());
+
 
 
 
@@ -37,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/", homeRoute);
 app.use("/login", loginRoute);
 app.use("/signup", signupRoute);
-
+app.use("/posts", postsRoute);
 
 
 
