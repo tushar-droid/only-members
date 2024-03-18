@@ -4,4 +4,13 @@ extends layout
 block content 
 
 
-    h1 THIS IS THE LOGIN PAGE
+    h1 LOGIN HERE 
+
+    form(method="POST")
+        label(for="username") EMAIL: 
+        input(type="email", name="username", required)
+        br
+        label(for="password") PASSWORD: 
+        input(type="password", name="password", required)
+        br
+        button(type="submit") Submit
