@@ -4,7 +4,13 @@ const passport = require("passport");
 
 
 exports.getLogin = asyncHandler(async(req, res, next) =>{
-    res.render("login");
+    //IF THE USER IS ALREADY AUTHENTICATED
+    if(req.isAuthenticated()){
+        res.redirect("/posts")
+    }
+    else{
+        res.render("login");
+    }
 })
 
 // exports.postLogin = asyncHandler(async(req, res, next) =>{

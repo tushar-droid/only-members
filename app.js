@@ -11,8 +11,8 @@ const homeRoute = require("./routes/home");
 const loginRoute = require("./routes/login"); 
 const signupRoute = require("./routes/signup");
 const postsRoute = require('./routes/posts');
-
-
+const Post = require('./models/post');
+const User = require('./models/user')
 const dbConnect = require("./db_connection/mongoose-connection");
 
 
@@ -49,7 +49,19 @@ app.use("/posts", postsRoute);
 
 
 
+// const createSomePosts = async () =>{
+//   console.log("creating some posts")
+//   const user = await User.find({name: 'test user'}).exec();
+//   const new_post = new Post({
+//     title: "test post",
+//     details: "post details",
+//     user: user[0]._id
+//   });
+//   console.log(new_post)
+//   await new_post.save();
+// }
 
+// createSomePosts();
 
 
 // catch 404 and forward to error handler
