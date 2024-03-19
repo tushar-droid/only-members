@@ -1,8 +1,35 @@
+:root{
+  --back-clr: #062726;
+  --font-clr: white;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--back-clr);
+  color: var(--font-clr);
 }
 
 a {
   color: #00B7FF;
+}
+li{
+  list-style-type: none;
+}
+
+.posts-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 5rem;
+}
+
+.posts-grid > li{
+  background-color: #0b3635;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.posts-grid > li:hover{
+  background-color: #104c4b;;
 }

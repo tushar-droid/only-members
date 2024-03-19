@@ -8,7 +8,7 @@ exports.getAllPosts = asynHandler(async(req, res, next) =>{
 
     console.log(all_posts)
 
-    res.render('all-posts', {isAllowed: req.isAuthenticated(), posts: all_posts});
+    res.render('all-posts', {isAuthenticated: req.isAuthenticated(), posts: all_posts});
 });
 
 

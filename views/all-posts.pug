@@ -4,15 +4,11 @@ block content
 
     h1 THIS IS THE POSTS PAGE
 
-    if isAllowed 
-        for post in posts 
-            li 
-                h3= post.title 
-                p= post.details 
-                p= post.user.name 
-                p= post.status
-
-
-
-    else 
-        h3 USER IS NOT AUTHENTICATED
+        div(class="posts-grid")            
+            for post in posts 
+                li 
+                    h3= post.title 
+                    p= post.details 
+                    p= post.status
+                    if isAuthenticated
+                        p= post.user.name 

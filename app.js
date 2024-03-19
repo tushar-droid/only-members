@@ -51,10 +51,10 @@ app.use("/posts", postsRoute);
 
 // const createSomePosts = async () =>{
 //   console.log("creating some posts")
-//   const user = await User.find({name: 'test user'}).exec();
+//   const user = await User.find({name: 'test name'}).exec();
 //   const new_post = new Post({
-//     title: "test post",
-//     details: "post details",
+//     title: "THIS IS THE ANOTHER POST TITLE",
+//     details: "here are some details about this post, this is not that great post actually",
 //     user: user[0]._id
 //   });
 //   console.log(new_post)
