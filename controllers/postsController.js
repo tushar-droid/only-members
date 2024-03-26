@@ -1,14 +1,30 @@
-const asynHandler = require("express-async-handler");
+const asyncHandler = require("express-async-handler");
 const Post = require("../models/post")
 const User = require("../models/user")
 
-exports.getAllPosts = asynHandler(async(req, res, next) =>{
+
+
+exports.getAllPosts = asyncHandler(async(req, res, next) =>{
     
     const all_posts = await Post.find({}).populate('user').exec();
-
-    console.log(all_posts)
-
     res.render('all-posts', {isAuthenticated: req.isAuthenticated(), posts: all_posts});
 });
 
 
+exports.createNewPostGet = asyncHandler(async(req, res, next) =>{
+    res.render("create-post-form");
+})
+
+exports.createNewPostPost = asyncHandler(async(req, res, next) =>{
+    console.log(req.body.title);
+    console.log(req.body.details);
+    console.log(req.user._id)
+    console.log("DATE: ", new Date().toLocaleDateString());
+    const post = new Post({
+        title: req.body.title,
+        details: req.body.details,
+        user: req.user._id
+    });
+    const result = await post.save();
+    res.redirect("/posts")
+})

@@ -12,3 +12,6 @@ block content
                     p= post.status
                     if isAuthenticated
                         p= post.user.name 
+    if isAuthenticated
+        a(href="/posts/create-post") 
+            button Create new post
