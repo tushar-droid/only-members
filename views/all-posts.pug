@@ -10,6 +10,8 @@ block content
                     h3= post.title 
                     p= post.details 
                     p= post.status
+                    if post.date 
+                        h6= post.date
                     if isAuthenticated
                         p= post.user.name 
     if isAuthenticated

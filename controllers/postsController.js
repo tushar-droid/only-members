@@ -12,7 +12,13 @@ exports.getAllPosts = asyncHandler(async(req, res, next) =>{
 
 
 exports.createNewPostGet = asyncHandler(async(req, res, next) =>{
-    res.render("create-post-form");
+    if(req.isAuthenticated())
+        res.render("create-post-form");
+    else{
+        res.render("signup", {alerts: "Please signup or login to create posts"})
+        // res.redirect("/",)
+        // res.redirect("/signup", {alerts: "Please signup or login to create posts"})
+    }
 })
 
 exports.createNewPostPost = asyncHandler(async(req, res, next) =>{
@@ -23,6 +29,7 @@ exports.createNewPostPost = asyncHandler(async(req, res, next) =>{
     const post = new Post({
         title: req.body.title,
         details: req.body.details,
+        date: new Date().toLocaleDateString(),
         user: req.user._id
     });
     const result = await post.save();
