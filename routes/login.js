@@ -10,5 +10,4 @@ router.post("/", passport.authenticate("local", {
     failureRedirect: "/signup"
 }))
 
-
 module.exports = router;

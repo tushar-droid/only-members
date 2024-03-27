@@ -5,6 +5,7 @@ const router = express.Router();
 
 
 router.get("/", homeController.homePage);
+router.get("/logout", homeController.getLogout);
 
 
 module.exports = router;

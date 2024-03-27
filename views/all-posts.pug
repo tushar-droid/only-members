@@ -2,18 +2,16 @@ extends layout
 
 block content 
 
-    h1 THIS IS THE POSTS PAGE
-
-        div(class="posts-grid")            
-            for post in posts 
-                li 
-                    h3= post.title 
-                    p= post.details 
-                    p= post.status
-                    if post.date 
-                        h6= post.date
-                    if isAuthenticated
-                        p= post.user.name 
+    div(class="posts-grid")            
+        for post in posts 
+            li 
+                h3= post.title 
+                p= post.details 
+                p= post.status
+                if post.date 
+                    h6= post.date
+                if isAuthenticated
+                    p= post.user.name 
     if isAuthenticated
         a(href="/posts/create-post") 
             button Create new post

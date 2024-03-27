@@ -4,4 +4,17 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    navbar 
+      h1 Only-Members
+      ul
+        if isAuthenticated  
+          li 
+            a(href="/logout")
+              button logout 
+        else 
+          li 
+            a(href="/login") login
+          li 
+            a(href="/signup") signup
+
     block content
