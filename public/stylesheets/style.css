@@ -42,6 +42,7 @@ navbar{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2%;
+  font-size:1.5rem
 }
 navbar > ul{
   display: flex;
@@ -67,7 +68,7 @@ navbar > ul{
   text-transform: uppercase;
 }
 
-.signup-page, .login-page{
+.signup-page, .login-page, .home-page{
   
   display:flex;
   align-items: center;
@@ -75,14 +76,16 @@ navbar > ul{
 }
 
 
-.signup-content, .login-content{
-  outline: white solid;
+.signup-content, .login-content, .home-content{
+  /* outline: white solid; */
   width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2% 3%;
+  font-size: 2rem;
+
 }
 
 .signup-content  form, .login-content form{
@@ -91,3 +94,39 @@ navbar > ul{
   align-items: center;
   justify-content: center;
 }
+
+.home-content{
+  
+  gap:2rem;
+  outline: none;
+}
+
+button {
+  font-size: 2rem;
+  width: 200px;
+  cursor: pointer;
+  background-color: #154b4a;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+input{
+  font-size: 2rem;
+  border-radius: 12px;
+  border: none;
+}
+
+
+button:hover{
+  background-color: #1f6261;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+table{
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+

@@ -3,10 +3,13 @@ extends layout
 
 block content 
 
-    h1 THIS IS THE HOME PAGE
-    a(href="/login") 
-        button login
-    a(href="/signup")
-        button signup 
-    a(href="./posts") continue as a guest 
-    
+    div(class='home-page')
+        div(class='home-content')
+            h1 WELCOME TO ONLY MEMBERS
+
+            a(href="/login") 
+                button Login
+            a(href="/signup")
+                button Signup 
+            a(href="./posts") Continue as a guest 
+            
