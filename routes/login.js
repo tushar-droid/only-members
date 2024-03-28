@@ -7,7 +7,8 @@ router.get("/", loginController.getLogin);
 // router.post("/", loginController.postLogin);
 router.post("/", passport.authenticate("local", {
     successRedirect: "/posts",
-    failureRedirect: "/signup"
+    failureRedirect: "/login",
+    failureMessage: true
 }))
 
 module.exports = router;

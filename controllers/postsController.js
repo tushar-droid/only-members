@@ -7,13 +7,13 @@ const User = require("../models/user")
 exports.getAllPosts = asyncHandler(async(req, res, next) =>{
     
     const all_posts = await Post.find({}).populate('user').exec();
-    res.render('all-posts', {isAuthenticated: req.isAuthenticated(), posts: all_posts});
+    res.render('all-posts', {isAuthenticated: req.isAuthenticated(), posts: all_posts,  user: req.user?req.user.name: ''});
 });
 
 
 exports.createNewPostGet = asyncHandler(async(req, res, next) =>{
     if(req.isAuthenticated())
-        res.render("create-post-form");
+        res.render("create-post-form", {isAuthenticated: true, user: req.user?req.user.name: ''} );
     else{
         res.render("signup", {alerts: "Please signup or login to create posts"})
         // res.redirect("/",)

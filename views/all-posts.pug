@@ -4,7 +4,7 @@ block content
 
     div(class="posts-grid")            
         for post in posts 
-            li 
+            li(class="posts-container")
                 h3= post.title 
                 p= post.details 
                 p= post.status
