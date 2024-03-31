@@ -3,9 +3,15 @@ const router = express.Router();
 const loginController = require('../controllers/loginController');
 const passport = require("passport");
 
+
+
 router.get("/", loginController.getLogin);
+
 // router.post("/", loginController.postLogin);
-router.post("/", passport.authenticate("local", {
+
+
+router.post("/",
+    passport.authenticate("local", {
     successRedirect: "/posts",
     failureRedirect: "/login",
     failureMessage: true

@@ -13,7 +13,9 @@ block content
                 h3= post.title 
                 p= post.details 
                 p= post.status
-                if post.date 
-                    h6= post.date
+
                 if isAuthenticated
-                    p= post.user.name 
+                    div(class='post-footer')
+                        if post.date 
+                            h6= post.date
+                        p= post.user.name 

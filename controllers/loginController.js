@@ -18,13 +18,6 @@ exports.getLogin = asyncHandler(async(req, res, next) =>{
 })
 
 
-// exports.postLogin = asyncHandler(async(req, res, next) =>{
-//     console.log("~~~~~~~~~~~~~in the post part~~~~~~~~~~~~~~~~~~~")
-//     passport.authenticate("local", {
-//         successRedirect: "/posts",
-//         failureRedirect: "/login"
-//     })
-// });
 
 
 

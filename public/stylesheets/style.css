@@ -23,6 +23,7 @@ li{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 5rem;
+  
 }
 
 .posts-grid > li{
@@ -47,8 +48,7 @@ navbar > ul{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
-  width: 20%;
+  width: 40%;
 }
 
 .posts-container{
@@ -56,11 +56,17 @@ navbar > ul{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+}
+
+.posts-container *{
+  margin: 0;
 }
 
 .posts-container > h3{
   text-transform: uppercase;
-  margin: 0;
+
+  margin-bottom: 1rem;
 }
 
 .user-name{
@@ -149,4 +155,16 @@ textarea {
 
 label{
   font-size: 1.5rem;
+}
+
+.post-footer{
+  color: rgba(255, 255, 255, 0.696);
+  font-weight: 100;
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-transform: capitalize;
+  justify-content: space-between;
+  font-style: italic;
 }
