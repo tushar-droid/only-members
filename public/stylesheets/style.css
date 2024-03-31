@@ -16,11 +16,13 @@ button{
 
 navbar  h1{
   font-family: "Galada", cursive;
+  text-decoration: underline;
 }
 
 body {
   padding: 20px 50px ;
   background-color: var(--back-clr);
+  
   color: var(--font-clr);
 }
 
@@ -35,14 +37,14 @@ li{
 
 .posts-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 5rem;
   
 }
 
 .posts-grid > li{
   background-color: #0b3635;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
@@ -69,7 +71,6 @@ navbar > ul{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -133,7 +134,7 @@ button {
 }
 input{
   font-size: 2rem;
-  border-radius: 12px;
+  border-radius: 6px;
   border: none;
   padding: 5px 10px;
   color: rgb(70, 69, 69);
@@ -237,6 +238,12 @@ hr{
   width: 100%;
 }
 
-
+/* removes increment icon from input field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
