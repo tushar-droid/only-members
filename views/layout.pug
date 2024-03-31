@@ -3,9 +3,11 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
   body
     navbar 
-      h1 Only-Members
+      a(href="/") 
+        h1 Only-Members
       ul
         if isAuthenticated  
           li 

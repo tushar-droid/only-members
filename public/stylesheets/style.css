@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Galada&display=swap');
+
+
+
+
 :root{
   --back-clr: #062726;
   --font-clr: white;
+  font-family: "Galada", cursive;
+
 }
+
+button{
+  font-family: "Galada", cursive;
+
+}
+
+
+
 
 body {
   padding: 20px 50px ;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: var(--back-clr);
   color: var(--font-clr);
 }
@@ -42,7 +56,7 @@ navbar{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2%;
-  font-size:1.5rem
+  font-size:1.5rem;
 }
 navbar > ul{
   display: flex;
@@ -56,7 +70,7 @@ navbar > ul{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  text-align: center;
 }
 
 .posts-container *{
