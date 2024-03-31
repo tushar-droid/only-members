@@ -2,6 +2,11 @@ extends layout
 
 block content 
 
+    if isAuthenticated
+        div(class='newpost-container')
+            a(href="/posts/create-post") 
+                button(class='new-post-btn') New Post
+
     div(class="posts-grid")            
         for post in posts 
             li(class="posts-container")
@@ -12,6 +17,3 @@ block content
                     h6= post.date
                 if isAuthenticated
                     p= post.user.name 
-    if isAuthenticated
-        a(href="/posts/create-post") 
-            button Create new post

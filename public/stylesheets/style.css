@@ -8,7 +8,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: var(--back-clr);
   color: var(--font-clr);
-  
 }
 
 a {
@@ -68,7 +67,7 @@ navbar > ul{
   text-transform: uppercase;
 }
 
-.signup-page, .login-page, .home-page{
+.signup-page, .login-page, .home-page, .create-post-page{
   
   display:flex;
   align-items: center;
@@ -76,7 +75,7 @@ navbar > ul{
 }
 
 
-.signup-content, .login-content, .home-content{
+.signup-content, .login-content, .home-content, .create-post-content{
   /* outline: white solid; */
   width: fit-content;
   display: flex;
@@ -88,7 +87,7 @@ navbar > ul{
 
 }
 
-.signup-content  form, .login-content form{
+.signup-content  form, .login-content form, .create-post-content form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,6 +114,7 @@ input{
   font-size: 2rem;
   border-radius: 12px;
   border: none;
+  padding: 5px 10px;
 }
 
 
@@ -130,3 +130,23 @@ table{
   border-spacing: 1rem;
 }
 
+.newpost-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+}
+
+.new-post-btn{
+  font-size: 1rem;
+}
+textarea {
+  font-size: 1.5rem;
+  width: 400px;
+  height: 150px;
+}
+
+label{
+  font-size: 1.5rem;
+}

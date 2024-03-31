@@ -4,7 +4,14 @@ const User = require("../models/user");
 
 
 exports.getSignup = asyncHandler(async(req, res, next) =>{    
-    res.render("signup");
+    if(req.isAuthenticated()){
+        console.log("USER IS AUTHENTICATED REDIRECTING TO POSTS")
+        res.redirect("/posts")
+        //res.render("all-posts", {user: req.user.name})
+    }
+    else{
+        res.render("signup");
+    }
 })
 
 exports.postSignup = asyncHandler(async(req, res, next) =>{
