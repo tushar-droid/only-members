@@ -7,8 +7,9 @@ block content
 
         div(class='signup-content')
             h1 SIGN UP 
-                if alerts
-                    h3= alerts            
+            hr
+            if alerts
+                h3= alerts            
 
             form(method="POST")
                 table(class='signup-form-table')
@@ -40,9 +41,10 @@ block content
                 br
                 br
                 button(type="submit") Submit
-                
-
             if errors 
-                ul
-                    for error in errors 
-                        li= error.msg
+                h3 Error
+
+        if errors 
+            ul
+                for error in errors 
+                    li= error.msg

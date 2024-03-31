@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Galada&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 
 :root{
   --back-clr: #062726;
   --font-clr: white;
-  font-family: "Galada", cursive;
-
+  font-family: "Archivo Narrow", sans-serif;
 }
 
 button{
-  font-family: "Galada", cursive;
+  font-family: "Archivo Narrow", sans-serif;
 
 }
 
-
-
+navbar  h1{
+  font-family: "Galada", cursive;
+}
 
 body {
   padding: 20px 50px ;
@@ -88,14 +88,14 @@ navbar > ul{
 }
 
 .signup-page, .login-page, .home-page, .create-post-page{
-  
   display:flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 
-.signup-content, .login-content, .home-content, .create-post-content{
+.signup-content, .home-content, .create-post-content, .login-content{
   /* outline: white solid; */
   width: fit-content;
   display: flex;
@@ -124,22 +124,25 @@ button {
   font-size: 2rem;
   width: 200px;
   cursor: pointer;
-  background-color: #154b4a;
+  background-color: #0f3534;
   padding: 1rem 2rem;
   color: white;
   border: none;
   border-radius: 12px;
+  transition: all 0.3s ease;
 }
 input{
   font-size: 2rem;
   border-radius: 12px;
   border: none;
   padding: 5px 10px;
+  color: rgb(70, 69, 69);
 }
 
 
 button:hover{
-  background-color: #1f6261;
+  background-color: #133a3a;
+  transform: scale(1.05);
 }
 
 a:hover{
@@ -182,3 +185,58 @@ label{
   justify-content: space-between;
   font-style: italic;
 }
+
+.login-content{
+  height: 25rem;
+  border-radius: 12px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  justify-content: space-evenly;
+  padding-top: 0;
+  font-family: "Archivo Narrow", sans-serif;
+}
+.signup-content{
+  height: 35rem;
+  border-radius: 12px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  justify-content: space-evenly;
+  padding-top: 0;
+  font-family: "Archivo Narrow", sans-serif;
+}
+.login-content *, .signup-content *{
+  font-size: 1.2rem;
+}
+
+.login-content > h1, .signup-content > h1{
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.login-content input, .signup-content input{
+  background-color: rgba(255, 255, 255, 0.536);
+  transition: all 0.3s ease;
+}
+
+.login-content input:focus, .signup-content input:focus {
+  transform: scale(1.05)
+}
+
+hr{
+  width: 100%;
+}
+
+
+
+
