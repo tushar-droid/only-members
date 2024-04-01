@@ -10,8 +10,7 @@
 }
 
 button{
-  font-family: "Archivo Narrow", sans-serif;
-
+  font-family: "Archivo Narrow", sans-serif;       
 }
 
 navbar  h1{
@@ -71,7 +70,10 @@ navbar > ul{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   text-align: center;
+  outline: rgba(197, 193, 193, 0.669) solid;
+  border-radius: 6px;
 }
 
 .posts-container *{
@@ -163,7 +165,7 @@ table{
 }
 
 .new-post-btn{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 textarea {
   font-size: 1.5rem;
@@ -246,4 +248,66 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  body{
+    padding: 1rem;
+  }
+  navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signup-content{
+    height: 50rem;
+    width: 80%;
+  }
+
+  .home-content > h1{
+    text-align: center;
+  }
+  navbar > ul{
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .user-name{
+    display: none;
+  }
+
+  .create-post-content *{
+    font-size: 1.5rem;
+  }
+  .create-post-content input{
+    width: 100%;
+    padding: 0;
+  }
+
+  td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  textarea{
+    height: 100%;
+    width: 100%
+  }
+
+  .errors-list{
+    background-color: rgba(207, 82, 82, 0.372);
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: white solid;
+    border-radius: 12px;
+  }
+
+
+
+}
 

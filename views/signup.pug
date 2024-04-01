@@ -45,6 +45,6 @@ block content
                 h3 Error
 
         if errors 
-            ul
+            ul(class='errors-list')
                 for error in errors 
                     li= error.msg
